@@ -12,6 +12,9 @@ switch ($queHago) {
 	case 'video':
 			include("partes/video.html");
 		break;	*/
+		case 'CambiarFoto':
+		include("partes/fotos.php");
+		break;
 	case 'MostrarInicio':
 		include("partes/bienvenido.php");
 		break;

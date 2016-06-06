@@ -45,7 +45,7 @@ foreach ($arrayDeCds as $cd) {
 	<tbody>
 												
 		<?php 
-
+//th =columnas ..tr=filas...td=datos
 if ($_SESSION['usuariolala']=="admin"){
 	    ?>
 

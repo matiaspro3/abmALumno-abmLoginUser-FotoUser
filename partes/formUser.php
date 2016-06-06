@@ -1,4 +1,4 @@
-<?php 
+	<?php 
 session_start(); //siosi siempre va primero.
 
 if (isset($_SESSION['usuariolala']))   //pregunto si esta logueado(no importa quien)
@@ -11,14 +11,21 @@ if (isset($_SESSION['usuariolala']))   //pregunto si esta logueado(no importa qu
  //}  // la saco de aca sino da error cuando no logueo
  ?>	
 <table class="table"  style=" background-color: transparent;">
+					<div id='mainmenu' class='Frm animated bounceInRight'> <img src='imagenes/123.jpg' width='150px' height='150px'><br><br></div>
+									<li>
 
-				<li>
-
-					<a onclick="AltaUser()" class="btn btn-info">Cambiar mi Foto de Perfil </a>   <?php  //class="btn btn-success    verde ?>		
-</li>
+					  
+					<a  onclick="CambiarFoto()"  id="foto" class="btn btn-info">Cambiar mi Foto de Perfil </a>   <?php  //class="btn btn-success    verde ?>		
+									</li>
 
 
  	<?php 
+//	echo"<div id='mainmenu' class='Frm animated bounceInRight'> <img src='imagenes/123.jpg' width='150px' height='150px'><br><br></div>";	
+ 							/*Foto */
+
+
+ //echo "<div id='mainmenu' class='Frm animated bounceInRight'> <img src='$objUsuario->pathfoto' width='150px' height='150px'><br><br></div>";
+//echo "<tr>"."<td>".$auto[0]."</td><td>".$auto[1]."</td><td><img src=".$auto[2]."height=150 width=150</img></td></tr>";
 /*var_dump($_SESSION['usuariolala']);*/
 			//colores de botones
  //class="btn btn-success    verde .... btn btn-info azul   btn btn-warning amarrilloo-....btn btn-danger rojo 
@@ -50,7 +57,7 @@ if (isset($_SESSION['usuariolala']))   //pregunto si esta logueado(no importa qu
  													{
 										echo"<tr>
 										
-										<td><a onclick='VerUserAmodidificar($user->id)' class='btn btn-warning'>	   Editar Datos</a></td>
+							<td><a onclick='VerUserAmodidificar($user->id)' class='btn btn-warning'>	   Editar Datos</a></td>
 			
 										<td>$user->email</td>
 										<td>$user->pass</td>
@@ -70,7 +77,7 @@ if (isset($_SESSION['usuariolala']))   //pregunto si esta logueado(no importa qu
 										else {
 								echo"<tr>
 										
-										<td><a onclick='BorrarUser($user->id)' class='btn btn-danger'>   <span class='glyphicon glyphicon-trash'>&nbsp;</span>  Borrar</a></td>
+						<td><a onclick='BorrarUser($user->id)' class='btn btn-danger'>   <span class='glyphicon glyphicon-trash'>&nbsp;</span>  Borrar</a></td>
 										<td>$user->email</td>
 										<td>$user->pass</td>
 										<td>$user->tipo</td>
@@ -94,7 +101,7 @@ if (isset($_SESSION['usuariolala']))   //pregunto si esta logueado(no importa qu
 										if ($user->tipo == "otro" & $usuario==$user->email & $contraseña==$user->pass)
 							echo"<tr>
 										
-										<td><a onclick='VerUserAmodidificar($user->id)' class='btn btn-warning'>   <span class='glyphicon glyphicon-trash'>&nbsp;</span>  Editar Datos</a></td>
+			<td><a onclick='VerUserAmodidificar($user->id)' class='btn btn-warning'>   <span class='glyphicon glyphicon-trash'>&nbsp;</span>  Editar Datos</a></td>
 										<td>$user->email</td>
 										<td>$user->pass</td>
 											

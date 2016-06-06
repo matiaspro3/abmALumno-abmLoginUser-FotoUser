@@ -96,7 +96,36 @@ public static function TraerUnUser($id)
 
 			
 	}
+public static function TraerFotoDeUser($id) 
+	{			
 
+			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
+			$consulta =$objetoAccesoDato->RetornarConsulta("select foto from user where id = $id");
+			$consulta->execute();
+			$aluBuscado= $consulta->fetchObject('usuarios');
+
+			return $aluBuscado;				
+
+			
+	}
+
+	public static function GuardarFotoDeUser($id) 
+	{			
+			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
+			$consulta =$objetoAccesoDato->RetornarConsulta("
+				update user 
+				set foto ='$this->foto'
+				WHERE id='$this->id'
+				and email='$this->email'
+				and pass='$this->pass'
+				and tipo='$this->tipo'
+			"
+
+				);
+			return $consulta->execute();	
+
+			
+	}
 
 
 

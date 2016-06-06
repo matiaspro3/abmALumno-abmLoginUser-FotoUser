@@ -1,3 +1,37 @@
+<script type="text/javascript" src="js/funcionesAjax.js"></script>
+<script type="text/javascript" src="js/funcionesLogin.js"></script>
+<script type="text/javascript" src="js/funcionesABM.js"></script>
+<script type="text/javascript" src="js/funcionesUser.js"></script>
+ <input type="file" name ="foto	">	
+
+ 				<b>    </b>
+ 			<a onclick="MostarLogin()"    class="btn btn-info" id="guardarFoto" >Aceptar</a> </li>
+<?php 
+
+
+
+
+
+
+
+
+
+/*
+ <input type="file" name ="fotoAutito">
+    <input type="file" name="foto" id="foto" onchange="subirFoto()"><br>
+
+<?php 
+
+
+
+
+
+
+
+
+
+
+
 <?php 
 $accion=$_POST['estacionar'];
 $patente=$_POST['patente'];
@@ -9,9 +43,16 @@ $listaAx=array();
 if($accion=="ingreso")
 {
 	echo "Se guardo la patente $patente";
+
 	$archivo_ext=$_FILES['fotoAutito']['name'];
+
+
 	$archivo_ext2=explode(".", $archivo_ext);
+
+
 	$archivo_destino2="Fotitos/".$patente.".".$archivo_ext2[1];
+	
+
 	move_uploaded_file($_FILES['fotoAutito']['tmp_name'], $archivo_destino2);
 
 	$archivo=fopen("ticket.txt", "a");
@@ -69,6 +110,28 @@ else
 
 
 		}
- 		else echo "El auto NOOO esta";
+ 		else echo "El auto NOOO esta
+// crea la tabla
 
+$archivo=fopen("ticket.txt", "r");
+echo "<table border=1>";
+echo "<TH> Patente </TH><TH> Fecha </TH><TH> Foto </TH>";	//th =columnas ..tr=filas...td=datos
+while (!feof($archivo)) {
+ 		$renglon=fgets($archivo);
+ 		$auto=explode("@@@@", $renglon);
+ 		if ($auto[0]!="")
+ 		{
+ 			echo "<tr>";
+ 			echo "<tr>"."<td>".$auto[0]."</td><td>".$auto[1]."</td><td><img src=".$auto[2]."height=50 width=50</img></td></tr>";
+ 			echo "</tr>";
+
+
+
+ 		}
+ 	}
+ 	fclose($archivo);
+echo "</table>"
+
+ ?>
+*/
  ?>
