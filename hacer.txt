@@ -1,0 +1,4 @@
+cambiar el template del index.
+arreglar el mostrar.
+
+agregar un boton Mi Cuenta q muestre los datos del user y que pueda modificar dichos datos y ademas agregar una foto.(en la tabla grabo la ruta(simil aloq hjicimos con el archivo))
